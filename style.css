@@ -35,13 +35,11 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .skills, .teams, .contact, footer{
+.about, .services, .teams, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
-.services .serv-content,
-.skills .skills-content,
-.contact .contact-content{
+.services .serv-content{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -304,11 +302,19 @@ section .title::after{
 }
 
 /* teams section styling */
+.teams {
+    color:#111;
+    background-color: #fff;
+}
+.teams .title::before{
+    background: #111;
+}
 .teams .title::after{
+    background: #fff;
     content: "who with me";
 }
 .teams .carousel .card{
-    background: #222;
+    background: #f8f8ff;
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
@@ -453,11 +459,6 @@ footer span a:hover{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
-    .skills .skills-content .column,
-    .contact .contact-content .column{
-        width: 100%;
-        margin-bottom: 35px;
-    }
 }
 
 @media (max-width: 690px) {
@@ -485,16 +486,8 @@ footer span a:hover{
     .home .home-content .text-3{
         font-size: 27px;
     }
-    .about .about-content .right .text,
-    .skills .skills-content .left .text{
+    .about .about-content .right .text{
         font-size: 19px;
-    }
-    .contact .right form .fields{
-        flex-direction: column;
-    }
-    .contact .right form .name,
-    .contact .right form .email{
-        margin: 0;
     }
     .right form .error-box{
        width: 150px;
@@ -507,6 +500,7 @@ footer span a:hover{
         font-size: 23px;
         line-height: 38px;
     }
+    /* social icon */
 }
 .media-icons{
   float: right;
