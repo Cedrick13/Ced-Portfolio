@@ -207,7 +207,7 @@ section .title::after{
     padding: 12px 36px;
     margin-top: 20px;
     font-weight: 400;
-    border-radius: 6px;
+    border-radius: 35px;
     border: 2px solid crimson;
     transition: all 0.3s ease;
 }
@@ -251,7 +251,7 @@ section .title::after{
     font-weight: 500;
     padding: 10px 30px;
     margin-top: 20px;
-    border-radius: 6px;
+    border-radius: 35px;
     border: 2px solid crimson;
     transition: all 0.3s ease;
 }
