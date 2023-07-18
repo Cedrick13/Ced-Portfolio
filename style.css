@@ -199,22 +199,6 @@ section .title::after{
     color: crimson;
     font-weight: 500;
 }
-.home .home-content a{
-    display: inline-block;
-    background: crimson;
-    color: #fff;
-    font-size: 25px;
-    padding: 12px 36px;
-    margin-top: 20px;
-    font-weight: 400;
-    border-radius: 35px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
-}
-.home .home-content a:hover{
-    color: crimson;
-    background: none;
-}
 
 /* about section styling */
 .about .title::after{
@@ -243,23 +227,59 @@ section .title::after{
 .about .about-content .right p{
     text-align: justify;
 }
-.about .about-content .right a{
-    display: inline-block;
-    background: crimson;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 30px;
+.button {
+    width: 140px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     margin-top: 20px;
-    border-radius: 35px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
-}
-.about .about-content .right a:hover{
-    color: crimson;
-    background: none;
-}
-
+    padding: 10px 15px;
+    background-color: red;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    font-weight: 900;
+    transition-duration: .2s;
+    background: linear-gradient(0deg, #000, #272727);
+  }
+  
+  .button:before, .button:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+          #0000ff, #00ff00,#ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+  }
+  
+  @keyframes steam {
+    0% {
+      background-position: 0 0;
+    }
+  
+    50% {
+      background-position: 400% 0;
+    }
+  
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .button:after {
+    filter: blur(100px);
+  }
+  
 /* services section styling */
 .services, .project{
     color:#fff;
@@ -445,10 +465,6 @@ footer span a:hover{
     .home .home-content .text-3{
         font-size: 27px;
     }
-    .home .home-content a{
-        font-size: 23px;
-        padding: 10px 30px;
-    }
     .max-width{
         max-width: 930px;
     }
@@ -481,9 +497,6 @@ footer span a:hover{
     }
     .home .home-content .text-3{
         font-size: 25px;
-    }
-    .home .home-content a{
-        font-size: 20px;
     }
     .services .serv-content .card{
         width: 100%;
