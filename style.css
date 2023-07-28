@@ -312,7 +312,7 @@ section .title::after{
 }
 .project .title::after{
     background: #fff;
-    content: "Featured";
+    content: "Projects";
 }
 .project .carousel .card{
     background: #f8f8ff;
