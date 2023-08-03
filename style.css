@@ -90,41 +90,25 @@ section .title::after{
     align-items: center;
     justify-content: space-between;
 }
-/* loader */
-.loader {
+.loader{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    background: lightgrey;
+    height: 100%;
+    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background: #444444;
-    transition: opacity 1s, visibility 1s;
+    align-items: center;
   }
   
-  .loader--hidden {
-    opacity: 0;
-    visibility: hidden;
+  .disppear{
+    animation: vanish 1s forwards;
   }
-  
-  .loader::after {
-    content: "";
-    width: 75px;
-    height: 75px;
-    border: 15px solid #dddddd;
-    border-top-color: #111;
-    border-radius: 50%;
-    animation: loading 1s ease infinite;
-  }
-  
-  @keyframes loading {
-    from {
-      transform: rotate(0turn);
-    }
-    to {
-      transform: rotate(1turn);
+  @keyframes vanish {
+    100%{
+      opacity: 0;
+      visibility: hidden;
     }
   }
 /*loaders name */

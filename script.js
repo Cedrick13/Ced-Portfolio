@@ -59,14 +59,11 @@ $(document).ready(function(){
             }
         }
     });
-    // loader 
-window.addEventListener("load", () => {
-    const loader = document.querySelector(".loader");
-  
-    loader.classList.add("loader--hidden");
-  
-    loader.addEventListener("transitionend", () => {
-      document.body.removeChild(loader);
-    });
-  });  
+    var loader = document.querySelector(".loader")
+
+    window.addEventListener("load", vanish);
+    
+    function vanish() {
+      loader.classList.add("disppear");
+    }
 });
