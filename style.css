@@ -236,7 +236,7 @@ section .title::after{
     background-color: red;
     border-radius: 50px;
     border: none;
-    color: white;
+    color: #0000ff;
     position: relative;
     cursor: pointer;
     font-weight: 500;
