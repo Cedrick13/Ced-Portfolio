@@ -31,7 +31,7 @@ $(document).ready(function(){
     });
 
     var typed = new Typed(".typing-2", {
-        strings: ["Video/Picture Editor", "Web Designer", "IT Support"],
+        strings: ["Video Editor", "Web Designer", "IT Support"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
