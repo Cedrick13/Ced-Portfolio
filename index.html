@@ -188,9 +188,13 @@ document.addEventListener("keydown", function(e) {
     </section>
 
     <!-- footer section start -->
-    <footer>
-        <span>© 2023/2025 | Ced</span>
-    </footer>
+   <footer>
+  <p>© <span id="year"></span> | Ced</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
     <script src="script.js"></script>
 </body>
