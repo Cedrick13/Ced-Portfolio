@@ -90,21 +90,6 @@ section .title::after{
     align-items: center;
     justify-content: space-between;
 }
-.loader{
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: #C0C0C0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .disppear{
-    animation: vanish 1s forwards;
-  }
   @keyframes vanish {
     100%{
       opacity: 0;
