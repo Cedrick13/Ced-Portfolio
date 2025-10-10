@@ -256,7 +256,7 @@
        <!-- home section start -->
 <section class="home" id="home">
   <div class="max-width home-container">
-    <div class="home-text" data-aos="fade-right">
+     <div class="home-text" data-aos="fade-right" data-aos-delay="100">
       <h1 class="name">Cedrick <span>Embestro</span></h1>
       <h2 class="role">Design • Network • IT Support • Repeat</h2>
       <h3 class="tagline">And I'm a <span class="typing"></span></h3>
@@ -264,7 +264,7 @@
         <i class="fas fa-paper-plane"></i> Contact Me
       </a>
     </div>
-    <div class="home-image" data-aos="fade-left">
+    <div class="home-image" data-aos="fade-left" data-aos-delay="300">
       <img src="images/BG.jpg" alt="Cedrick profile" />
     </div>
   </div>
@@ -273,7 +273,7 @@
 <!-- about section start -->
 <section class="about" id="about">
   <div class="max-width about-container">
-    <h2 class="title">About Me</h2>
+    <h2 class="title" data-aos="fade-up">About Me</h2>
     <div class="about-content">
       <div class="about-left" data-aos="fade-right">
   <img src="images/about.jpg" alt="Cedrick" />
@@ -336,13 +336,12 @@
 </section>
 
         <!-- projects section start -->
-      <!-- projects section start -->
 <section class="projects" id="projects">
   <div class="max-width">
-    <h2 class="title">My Projects</h2>
+    <h2 class="title" data-aos="fade-up">My Projects</h2>
     <div class="project-grid">
       <!-- Card 1 -->
-      <div class="project-card" data-aos="zoom-in">
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
         <img src="images/P1.png" alt="Project 1" />
         <div class="project-overlay">
           <h3>Atmos</h3>
@@ -355,7 +354,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="project-card" data-aos="zoom-in">
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
         <img src="images/P4.png" alt="Project 2" />
         <div class="project-overlay">
           <h3>Pre Enrollment</h3>
@@ -368,7 +367,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="project-card" data-aos="zoom-in">
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
         <img src="images/P5.png" alt="Project 3" />
         <div class="project-overlay">
           <h3>Static Website</h3>
@@ -381,7 +380,7 @@
       </div>
 
       <!-- Card 4 -->
-      <div class="project-card" data-aos="zoom-in">
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
         <img src="images/P6.png" alt="Project 3" />
         <div class="project-overlay">
           <h3>Voting System</h3>
@@ -428,19 +427,6 @@ cards.forEach(card => {
   observer.observe(card);
 });
 </script>
-
-<style>
-.project-card {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease;
-}
-
-.project-card.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-</style>
 
 <!-- AOS JS -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
