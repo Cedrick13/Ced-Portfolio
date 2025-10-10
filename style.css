@@ -584,42 +584,41 @@ footer span a:hover{
     }
     /* social icon */
 }
-.media-icons{
-  float: right;
-  margin-right: 5px;
-  line-height: 20px;
+.media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 12px;
 }
-.media-icons a{
-  max-width: 50px;
-  text-align:center;
-}
-.media-icons a i{
+
+.media-icons a {
+  color: #fff;
   font-size: 20px;
-  background:#333;
-  width:40px;
+  width: 40px;
   height: 40px;
-  line-height: 40px;
-  color:#fff;
   border-radius: 50%;
-  margin:1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
 }
-.media-icons a i:hover{
-  background:#222;
-  color:#fff;
+
+.media-icons a:hover {
+  background: #00bcd4;
+  color: #111;
+  box-shadow: 0 0 12px #00bcd4;
+  transform: translateY(-4px);
 }
-@media(max-width:500px){
-  .toggle-nav{
-      font-size:40px;
-      text-align:center;
-      font-weight: bold;
-      padding:10px 0px 10px 0px;
-      background:#222;
-      width:100%;
-      display: block;
+
+@media (max-width: 768px) {
+  .media-icons {
+    gap: 12px;
   }
-}
-@media(min-width:500px){
-  .menu ul li{
-      display: block !important;
+
+  .media-icons a {
+    font-size: 18px;
+    width: 35px;
+    height: 35px;
   }
 }
