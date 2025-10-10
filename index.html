@@ -12,6 +12,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
         <script>
             // Disable right click
@@ -255,7 +256,7 @@
        <!-- home section start -->
 <section class="home" id="home">
   <div class="max-width home-container">
-    <div class="home-text">
+    <div class="home-text" data-aos="fade-right">
       <h1 class="name">Cedrick <span>Embestro</span></h1>
       <h2 class="role">Design • Network • IT Support • Repeat</h2>
       <h3 class="tagline">And I'm a <span class="typing"></span></h3>
@@ -263,7 +264,7 @@
         <i class="fas fa-paper-plane"></i> Contact Me
       </a>
     </div>
-    <div class="home-image">
+    <div class="home-image" data-aos="fade-left">
       <img src="images/BG.jpg" alt="Cedrick profile" />
     </div>
   </div>
@@ -274,10 +275,10 @@
   <div class="max-width about-container">
     <h2 class="title">About Me</h2>
     <div class="about-content">
-      <div class="about-left">
-        <img src="images/about.jpg" alt="Cedrick" />
-      </div>
-      <div class="about-right">
+      <div class="about-left" data-aos="fade-right">
+  <img src="images/about.jpg" alt="Cedrick" />
+</div>
+      <div class="about-right" data-aos="fade-left">
         <h3 class="about-heading">Who I Am</h3>
         <p>
           Hi, I’m <b>Ced</b> — a passionate <b>IT Support Specialist</b> and 
@@ -305,9 +306,9 @@
        <!-- services section start -->
 <section class="services" id="services">
   <div class="max-width">
-    <h2 class="title">My Services</h2>
+    <h2 class="title" data-aos="fade-up">My Services</h2>
     <div class="serv-content">
-      <div class="card">
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
         <div class="box">
           <div class="icon"><i class="fas fa-wrench"></i></div>
           <div class="text">IT Support</div>
@@ -315,7 +316,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
         <div class="box">
           <div class="icon"><i class="fas fa-laptop-code"></i></div>
           <div class="text">Software Development</div>
@@ -323,7 +324,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" data-aos="fade-up" data-aos-delay="300">
         <div class="box">
           <div class="icon"><i class="fas fa-network-wired"></i></div>
           <div class="text">Network Setup</div>
@@ -341,7 +342,7 @@
     <h2 class="title">My Projects</h2>
     <div class="project-grid">
       <!-- Card 1 -->
-      <div class="project-card">
+      <div class="project-card" data-aos="zoom-in">
         <img src="images/P1.png" alt="Project 1" />
         <div class="project-overlay">
           <h3>Atmos</h3>
@@ -354,7 +355,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="project-card">
+      <div class="project-card" data-aos="zoom-in">
         <img src="images/P4.png" alt="Project 2" />
         <div class="project-overlay">
           <h3>Pre Enrollment</h3>
@@ -367,7 +368,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="project-card">
+      <div class="project-card" data-aos="zoom-in">
         <img src="images/P5.png" alt="Project 3" />
         <div class="project-overlay">
           <h3>Static Website</h3>
@@ -380,7 +381,7 @@
       </div>
 
       <!-- Card 4 -->
-      <div class="project-card">
+      <div class="project-card" data-aos="zoom-in">
         <img src="images/P6.png" alt="Project 3" />
         <div class="project-overlay">
           <h3>Voting System</h3>
@@ -440,6 +441,16 @@ cards.forEach(card => {
   transform: translateY(0);
 }
 </style>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: false,  // allows animation on scroll up
+    offset: 120,
+  });
+</script>
 
     </body>
 </html>
