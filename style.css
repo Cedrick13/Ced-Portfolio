@@ -263,50 +263,66 @@ section .title::after{
   }
   
 /* services section styling */
-.services, .project{
-    color:#fff;
-    background: #111;
+.services {
+  background: linear-gradient(180deg, #f8f9fb, #ffffff);
+  padding: 100px 0;
 }
-.services .title::before,
-.project .title::before{
-    background: #fff;
+
+.services .title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+  margin-bottom: 60px;
+  position: relative;
 }
-.services .title::after,
-.project .title::after{
-    background: #111;
-    content: "Skills";
+
+.services .serv-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
-.services .serv-content .card{
-    width: calc(33% - 20px);
-    background: #222;
-    text-align: center;
-    border-radius: 6px;
-    padding: 50px 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+
+.services .card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.services .serv-content .card:hover{
-    background: crimson;
+
+.services .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
-.services .serv-content .card .box{
-    transition: all 0.3s ease;
+
+.services .box {
+  padding: 40px 30px;
+  text-align: center;
 }
-.services .serv-content .card:hover .box{
-    transform: scale(1.05);
+
+.services .icon {
+  background: #ff0000;
+  color: #fff;
+  font-size: 28px;
+  padding: 18px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 20px;
 }
-.services .serv-content .card i{
-    font-size: 50px;
-    color: crimson;
-    transition: color 0.3s ease;
+
+.services .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
 }
-.services .serv-content .card:hover i{
-    color: #fff;
+
+.services p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
 }
-.services .serv-content .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
+
 
 /* projects section styling */
 .project {
