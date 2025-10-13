@@ -68,11 +68,10 @@ $(document).ready(function () {
     }
 });
 
-once: true
+once: true;
 AOS.init({
-  duration: 1000, // animation duration
-  once: false,    // 👈 animate again when scrolling back up
-  offset: 120,    // trigger distance
+    duration: 1000, // animation duration
+    once: false, // 👈 animate again when scrolling back up
+    offset: 120, // trigger distance
 });
 AOS.refresh();
-
