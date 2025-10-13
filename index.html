@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -11,7 +11,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        />
         <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
         <script>
@@ -46,27 +49,29 @@
         </script>
 
         <style>
-            /* Loader wrapper (covers screen) */ 
+            /* Loader wrapper (covers screen) */
             .loader_bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #111;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  z-index: 9999;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-}
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: #111;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 20px;
+                z-index: 9999;
+                transition:
+                    opacity 0.5s ease,
+                    visibility 0.5s ease;
+            }
 
-.loader_bg.hidden {
-  opacity: 0;
-  visibility: hidden;
-}
+            .loader_bg.hidden {
+                opacity: 0;
+                visibility: hidden;
+            }
 
             /* --- Loaders --- */
             .loader {
@@ -210,29 +215,29 @@
         <div class="scroll-up-btn">
             <i class="fa fa-angle-up"></i>
         </div>
-          <!-- Loader Background -->
-  <div class="loader_bg">
-    <!-- Circle Loader -->
-    <div class="loader">
-      <svg viewBox="0 0 80 80">
-        <circle r="32" cy="40" cx="40"></circle>
-      </svg>
-    </div>
+        <!-- Loader Background -->
+        <div class="loader_bg">
+            <!-- Circle Loader -->
+            <div class="loader">
+                <svg viewBox="0 0 80 80">
+                    <circle r="32" cy="40" cx="40"></circle>
+                </svg>
+            </div>
 
-    <!-- Triangle Loader -->
-    <div class="loader triangle">
-      <svg viewBox="0 0 86 80">
-        <polygon points="43 8 79 72 7 72"></polygon>
-      </svg>
-    </div>
+            <!-- Triangle Loader -->
+            <div class="loader triangle">
+                <svg viewBox="0 0 86 80">
+                    <polygon points="43 8 79 72 7 72"></polygon>
+                </svg>
+            </div>
 
-    <!-- Square Loader -->
-    <div class="loader">
-      <svg viewBox="0 0 80 80">
-        <rect height="64" width="64" y="8" x="8"></rect>
-      </svg>
-    </div>
-  </div>
+            <!-- Square Loader -->
+            <div class="loader">
+                <svg viewBox="0 0 80 80">
+                    <rect height="64" width="64" y="8" x="8"></rect>
+                </svg>
+            </div>
+        </div>
         <nav class="navbar">
             <div class="max-width">
                 <script>
@@ -244,185 +249,216 @@
                 </script>
                 <div class="loaders">CED</div>
                 <div class="media-icons">
-  <a href="https://github.com/Cedrick13"><i class="fab fa-github"></i></a>
-  <a href="https://twitter.com/Just_Ced4"><i class="fab fa-twitter"></i></a>
-  <a href="https://www.facebook.com/Loyal.Wew/"><i class="fab fa-facebook"></i></a>
-  <a href="https://www.instagram.com/cedcllp/"><i class="fab fa-instagram"></i></a>
-  <a href="https://www.linkedin.com/in/cedrick-embestro-01bb77284"><i class="fab fa-linkedin"></i></a>
-</div>
+                    <a href="https://github.com/Cedrick13"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/Just_Ced4"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/Loyal.Wew/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/cedcllp/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/cedrick-embestro-01bb77284"><i class="fab fa-linkedin"></i></a>
+                </div>
             </div>
         </nav>
 
-       <!-- home section start --> 
-<section class="home" id="home">
-  <div class="max-width home-container">
-     <div class="home-text" data-aos="fade-right" data-aos-delay="100">
-      <h1 class="name">Cedrick <span>Embestro</span></h1>
-      <h3 class="tagline">And I'm a <span class="typing"></span></h3>
-      <a href="mailto:cedrick13wew@gmail.com" class="cta-button">
-        <i class="fas fa-paper-plane"></i> Contact Me
-      </a>
-    </div>
-    <div class="home-image" data-aos="fade-left" data-aos-delay="300">
-      <img src="images/BG.jpg" alt="Cedrick profile" />
-    </div>
-  </div>
-</section>
+        <!-- home section start -->
+        <section class="home" id="home">
+            <div class="max-width home-container">
+                <div class="home-text" data-aos="fade-right" data-aos-delay="100">
+                    <h1 class="name">Cedrick <span>Embestro</span></h1>
+                    <h3 class="tagline">And I'm a <span class="typing"></span></h3>
+                    <a href="mailto:cedrick13wew@gmail.com" class="cta-button">
+                        <i class="fas fa-paper-plane"></i> Contact Me
+                    </a>
+                </div>
+                <div class="home-image" data-aos="fade-left" data-aos-delay="300">
+                    <img src="images/BG.jpg" alt="Cedrick profile" />
+                </div>
+            </div>
+        </section>
 
-<!-- about section start -->
-<section class="about" id="about">
-  <div class="max-width about-container">
-    <h2 class="title" data-aos="fade-up">About Me</h2>
-    <p class="subtitle" data-aos="fade-up" data-aos-delay="100">Personal</p>
-    <div class="about-content">
-      <div class="about-left" data-aos="fade-up" data-aos-duration="3000">
-  <img src="images/about.jpg" alt="Cedrick" />
-</div>
-      <div class="about-right" data-aos="fade-up" data-aos-duration="3000">
-        <h3 class="about-heading">Who I Am</h3>
-        <p>
-          Hi, I’m <b>Ced</b> — a passionate <b>IT Support Specialist</b> and 
-          <b>network enthusiast</b> who loves solving complex technical problems 
-          and making systems run smoothly. My experience includes network setup, 
-          system maintenance, and end-user support.  
-        </p>
-        <p>
-          I’m also developing my skills in <b>software development</b>, 
-          creating tools and applications using <b>C#</b> and <b>MySQL</b> 
-          to improve productivity and streamline workflows.
-        </p>
-        <a
-          href="https://drive.google.com/file/d/1o5pPuy4Ex586gtuyRkHOeUVdxCGkafQ0/view?usp=sharing"
-          class="download-btn"
-        >
-          <i class="fas fa-arrow-circle-down"></i> Download CV
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+        <!-- about section start -->
+        <section class="about" id="about">
+            <div class="max-width about-container">
+                <h2 class="title" data-aos="fade-up">About Me</h2>
+                <p class="subtitle" data-aos="fade-up" data-aos-delay="100">Personal</p>
+                <div class="about-content">
+                    <div class="about-left" data-aos="fade-up" data-aos-duration="3000">
+                        <img src="images/about.jpg" alt="Cedrick" />
+                    </div>
+                    <div class="about-right" data-aos="fade-up" data-aos-duration="3000">
+                        <h3 class="about-heading">Who I Am</h3>
+                        <p>
+                            Hi, I’m <b>Ced</b> — a passionate <b>IT Support Specialist</b> and
+                            <b>network enthusiast</b> who loves solving complex technical problems and making systems
+                            run smoothly. My experience includes network setup, system maintenance, and end-user
+                            support.
+                        </p>
+                        <p>
+                            I’m also developing my skills in <b>software development</b>, creating tools and
+                            applications using <b>C#</b> and <b>MySQL</b>
+                            to improve productivity and streamline workflows.
+                        </p>
+                        <a
+                            href="https://drive.google.com/file/d/1o5pPuy4Ex586gtuyRkHOeUVdxCGkafQ0/view?usp=sharing"
+                            class="download-btn"
+                        >
+                            <i class="fas fa-arrow-circle-down"></i> Download CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- skills section start -->
-<section class="skills" id="skills">
-  <div class="max-width">
-    <h2 class="title" data-aos="fade-up">Skills</h2>
-    <p class="subtitle" data-aos="fade-up" data-aos-delay="100">My Technical</p>
+        <!-- skills section start -->
+        <section class="skills" id="skills">
+            <div class="max-width">
+                <h2 class="title" data-aos="fade-up">Skills</h2>
+                <p class="subtitle" data-aos="fade-up" data-aos-delay="100">My Technical</p>
 
-    <div class="skills-wrapper">
+                <div class="skills-wrapper">
+                    <!-- Frontend Developer -->
+                    <div class="skill-box" data-aos="fade-up" data-aos-delay="200">
+                        <div class="skill-header">
+                            <i class="fas fa-code"></i>
+                            <h3>Frontend Developer</h3>
+                            <p></p>
+                        </div>
+                        <div class="icons">
+                            <div class="icon"><img src="images/c-sharp.png" alt="C#" /><span>C#</span></div>
+                            <div class="icon"><img src="images/js.png" alt="JavaScript" /><span>JavaScript</span></div>
+                            <div class="icon"><img src="images/media.png" alt="Bootstrap" /><span>Bootstrap</span></div>
+                            <div class="icon"><img src="images/html-5.png" alt="HTML5" /><span>HTML5</span></div>
+                            <div class="icon"><img src="images/css-3.png" alt="CSS3" /><span>CSS3</span></div>
+                        </div>
+                    </div>
 
-      <!-- Frontend Developer -->
-      <div class="skill-box" data-aos="fade-up" data-aos-delay="200">
-        <div class="skill-header">
-          <i class="fas fa-code"></i>
-          <h3>Frontend Developer</h3>
-          <p></p>
-        </div>
-        <div class="icons">
-          <div class="icon"><img src="images/c-sharp.png" alt="C#"><span>C#</span></div>
-          <div class="icon"><img src="images/js.png" alt="JavaScript"><span>JavaScript</span></div>
-          <div class="icon"><img src="images/media.png" alt="Bootstrap"><span>Bootstrap</span></div>
-          <div class="icon"><img src="images/html-5.png" alt="HTML5"><span>HTML5</span></div>
-          <div class="icon"><img src="images/css-3.png" alt="CSS3"><span>CSS3</span></div>
-        </div>
-      </div>
+                    <!-- Backend Developer -->
+                    <div class="skill-box" data-aos="fade-up" data-aos-delay="300">
+                        <div class="skill-header">
+                            <i class="fas fa-server"></i>
+                            <h3>Backend Developer</h3>
+                            <p></p>
+                        </div>
+                        <div class="icons">
+                            <div class="icon">
+                                <img src="images/brand-laravel.png" alt="Laravel" /><span>Laravel</span>
+                            </div>
+                            <div class="icon"><img src="images/php.png" alt="PHP" /><span>PHP</span></div>
+                            <div class="icon"><img src="images/mysql.png" alt="MySQL" /><span>MySQL</span></div>
+                        </div>
+                    </div>
 
-      <!-- Backend Developer -->
-      <div class="skill-box" data-aos="fade-up" data-aos-delay="300">
-        <div class="skill-header">
-          <i class="fas fa-server"></i>
-          <h3>Backend Developer</h3>
-          <p></p>
-        </div>
-        <div class="icons">
-          <div class="icon"><img src="images/brand-laravel.png" alt="Laravel"><span>Laravel</span></div>
-          <div class="icon"><img src="images/php.png" alt="PHP"><span>PHP</span></div>
-          <div class="icon"><img src="images/mysql.png" alt="MySQL"><span>MySQL</span></div>
-        </div>
-      </div>
-
-      <!-- Others -->
-      <div class="skill-box" data-aos="fade-up" data-aos-delay="400">
-        <div class="skill-header">
-          <i class="fas fa-brain"></i>
-          <h3>Others</h3>
-          <p></p>
-        </div>
-        <div class="icons">
-          <div class="icon"><img src="images/figma.png" alt="Figma"><span>Figma</span></div>
-          <div class="icon"><img src="images/draw.io.png" alt="Draw.io"><span>Draw.io</span></div>
-          <div class="icon"><img src="images/xd.png" alt="Adobe XD"><span>Adobe XD</span></div>
-          <div class="icon"><img src="images/capcut.png" alt="Capcut"><span>Capcut</span></div>
-          <div class="icon"><img src="images/canva.png" alt="Canva"><span>Canva</span></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+                    <!-- Others -->
+                    <div class="skill-box" data-aos="fade-up" data-aos-delay="400">
+                        <div class="skill-header">
+                            <i class="fas fa-brain"></i>
+                            <h3>Others</h3>
+                            <p></p>
+                        </div>
+                        <div class="icons">
+                            <div class="icon"><img src="images/figma.png" alt="Figma" /><span>Figma</span></div>
+                            <div class="icon"><img src="images/draw.io.png" alt="Draw.io" /><span>Draw.io</span></div>
+                            <div class="icon"><img src="images/xd.png" alt="Adobe XD" /><span>Adobe XD</span></div>
+                            <div class="icon"><img src="images/capcut.png" alt="Capcut" /><span>Capcut</span></div>
+                            <div class="icon"><img src="images/canva.png" alt="Canva" /><span>Canva</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- projects section start -->
-<section class="projects" id="projects">
-  <div class="max-width">
-    <h2 class="title" data-aos="fade-up">Portfolio</h2>
-    <p class="subtitle" data-aos="fade-up" data-aos-delay="100">Recent Projects</p>
-    <div class="project-grid">
-      <!-- Card 1 -->
-      <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
-        <img src="images/P1.png" alt="Project 1" />
-        <div class="project-overlay">
-          <h3>Atmos</h3>
-          <p></p>
-          <div class="project-links">
-            <a href="https://www.figma.com/proto/mC0b299hRhAkTUtGQy7ERL/QR-Code?type=design&node-id=304-144&t=VQVPovenSGEYVefU-1&scaling=scale-down&page-id=0%3A1&mode=design" target="_blank">View</a>
-            <a href="https://www.figma.com/file/mC0b299hRhAkTUtGQy7ERL/QR-Code?type=design&node-id=0%3A1&mode=design&t=fXPWqmVUZ0wUNnpE-1" target="_blank">Code</a>
-          </div>
-        </div>
-      </div>
+        <section class="projects" id="projects">
+            <div class="max-width">
+                <h2 class="title" data-aos="fade-up">Portfolio</h2>
+                <p class="subtitle" data-aos="fade-up" data-aos-delay="100">Recent Projects</p>
+                <div class="project-grid">
+                    <!-- Card 1 -->
+                    <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="images/P1.png" alt="Project 1" />
+                        <div class="project-overlay">
+                            <h3>Atmos</h3>
+                            <p></p>
+                            <div class="project-links">
+                                <a
+                                    href="https://www.figma.com/proto/mC0b299hRhAkTUtGQy7ERL/QR-Code?type=design&node-id=304-144&t=VQVPovenSGEYVefU-1&scaling=scale-down&page-id=0%3A1&mode=design"
+                                    target="_blank"
+                                    >View</a
+                                >
+                                <a
+                                    href="https://www.figma.com/file/mC0b299hRhAkTUtGQy7ERL/QR-Code?type=design&node-id=0%3A1&mode=design&t=fXPWqmVUZ0wUNnpE-1"
+                                    target="_blank"
+                                    >Code</a
+                                >
+                            </div>
+                        </div>
+                    </div>
 
-      <!-- Card 2 -->
-      <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
-        <img src="images/P4.png" alt="Project 2" />
-        <div class="project-overlay">
-          <h3>Pre Enrollment</h3>
-          <p></p>
-          <div class="project-links">
-            <a href="https://www.figma.com/proto/u4uLc6upTIWYvdhJNuz8qe/Untitled?type=design&node-id=1-4&t=NyeghKdhduYjDP2g-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A4" target="_blank">View</a>
-            <a href="https://www.figma.com/file/u4uLc6upTIWYvdhJNuz8qe/Untitled?type=design&node-id=0%3A1&mode=design&t=oND3RObH2XPnYFwi-1" target="_blank">Code</a>
-          </div>
-        </div>
-      </div>
+                    <!-- Card 2 -->
+                    <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="images/P4.png" alt="Project 2" />
+                        <div class="project-overlay">
+                            <h3>Pre Enrollment</h3>
+                            <p></p>
+                            <div class="project-links">
+                                <a
+                                    href="https://www.figma.com/proto/u4uLc6upTIWYvdhJNuz8qe/Untitled?type=design&node-id=1-4&t=NyeghKdhduYjDP2g-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A4"
+                                    target="_blank"
+                                    >View</a
+                                >
+                                <a
+                                    href="https://www.figma.com/file/u4uLc6upTIWYvdhJNuz8qe/Untitled?type=design&node-id=0%3A1&mode=design&t=oND3RObH2XPnYFwi-1"
+                                    target="_blank"
+                                    >Code</a
+                                >
+                            </div>
+                        </div>
+                    </div>
 
-      <!-- Card 3 -->
-      <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
-        <img src="images/P5.png" alt="Project 3" />
-        <div class="project-overlay">
-          <h3>Static Website</h3>
-          <p></p>
-          <div class="project-links">
-            <a href="https://www.figma.com/proto/z3idfZCf2ILYsZmgJW532O/Dashboard?type=design&node-id=54-858&t=VOM7BfNwgon7Gh97-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=54%3A858&mode=design" target="_blank">View</a>
-            <a href="https://www.figma.com/file/z3idfZCf2ILYsZmgJW532O/Dashboard?type=design&node-id=0%3A1&mode=design&t=AH7rE2w2HMRNAPEt-1" target="_blank">Code</a>
-          </div>
-        </div>
-      </div>
+                    <!-- Card 3 -->
+                    <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="images/P5.png" alt="Project 3" />
+                        <div class="project-overlay">
+                            <h3>Static Website</h3>
+                            <p></p>
+                            <div class="project-links">
+                                <a
+                                    href="https://www.figma.com/proto/z3idfZCf2ILYsZmgJW532O/Dashboard?type=design&node-id=54-858&t=VOM7BfNwgon7Gh97-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=54%3A858&mode=design"
+                                    target="_blank"
+                                    >View</a
+                                >
+                                <a
+                                    href="https://www.figma.com/file/z3idfZCf2ILYsZmgJW532O/Dashboard?type=design&node-id=0%3A1&mode=design&t=AH7rE2w2HMRNAPEt-1"
+                                    target="_blank"
+                                    >Code</a
+                                >
+                            </div>
+                        </div>
+                    </div>
 
-      <!-- Card 4 -->
-      <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
-        <img src="images/P6.png" alt="Project 3" />
-        <div class="project-overlay">
-          <h3>Voting System</h3>
-          <p></p>
-          <div class="project-links">
-            <a href="https://www.figma.com/proto/sRmpaMV0JtcNDqdngIQyK8/Voting-System?type=design&node-id=17-67&t=18u6hMFOizOZcTXC-1&scaling=scale-down&page-id=15%3A2&starting-point-node-id=17%3A67&mode=design" target="_blank">View</a>
-            <a href="https://www.figma.com/file/sRmpaMV0JtcNDqdngIQyK8/Voting-System?type=design&node-id=15%3A2&mode=design&t=45h2Y7lIovKXmHJ9-1" target="_blank">Code</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+                    <!-- Card 4 -->
+                    <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="images/P6.png" alt="Project 3" />
+                        <div class="project-overlay">
+                            <h3>Voting System</h3>
+                            <p></p>
+                            <div class="project-links">
+                                <a
+                                    href="https://www.figma.com/proto/sRmpaMV0JtcNDqdngIQyK8/Voting-System?type=design&node-id=17-67&t=18u6hMFOizOZcTXC-1&scaling=scale-down&page-id=15%3A2&starting-point-node-id=17%3A67&mode=design"
+                                    target="_blank"
+                                    >View</a
+                                >
+                                <a
+                                    href="https://www.figma.com/file/sRmpaMV0JtcNDqdngIQyK8/Voting-System?type=design&node-id=15%3A2&mode=design&t=45h2Y7lIovKXmHJ9-1"
+                                    target="_blank"
+                                    >Code</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-
-        <!-- footer section start -->  
+        <!-- footer section start -->
         <footer>
             <p>Copyright © <span id="year-range"></span> | Ced</p>
         </footer>
@@ -439,30 +475,32 @@
         <script src="script.js"></script>
 
         <script>
-const cards = document.querySelectorAll('.project-card');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('fade-in');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.2 });
+            const cards = document.querySelectorAll(".project-card");
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("fade-in");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.2 }
+            );
 
-cards.forEach(card => {
-  observer.observe(card);
-});
-</script>
+            cards.forEach((card) => {
+                observer.observe(card);
+            });
+        </script>
 
-<!-- AOS JS -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,
-    once: false,  // allows animation on scroll up
-    offset: 120,
-  });
-</script>
-
+        <!-- AOS JS -->
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000,
+                once: false, // allows animation on scroll up
+                offset: 120,
+            });
+        </script>
     </body>
 </html>
