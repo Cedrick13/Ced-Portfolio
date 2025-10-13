@@ -48,24 +48,25 @@
         <style>
             /* Loader wrapper (covers screen) */ 
             .loader_bg {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: #111; /* background color */
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                z-index: 9999;
-                transition: opacity 0.5s ease, visibility 0.5s ease;
-            }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
 
-            /* Hide loader smoothly */
-            .loader_bg.hidden {
-                opacity: 0;
-                visibility: hidden;
-            }
+.loader_bg.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
 
             /* --- Loaders --- */
             .loader {
@@ -209,32 +210,31 @@
         <div class="scroll-up-btn">
             <i class="fa fa-angle-up"></i>
         </div>
+          <!-- Loader Background -->
+  <div class="loader_bg">
+    <!-- Circle Loader -->
+    <div class="loader">
+      <svg viewBox="0 0 80 80">
+        <circle r="32" cy="40" cx="40"></circle>
+      </svg>
+    </div>
+
+    <!-- Triangle Loader -->
+    <div class="loader triangle">
+      <svg viewBox="0 0 86 80">
+        <polygon points="43 8 79 72 7 72"></polygon>
+      </svg>
+    </div>
+
+    <!-- Square Loader -->
+    <div class="loader">
+      <svg viewBox="0 0 80 80">
+        <rect height="64" width="64" y="8" x="8"></rect>
+      </svg>
+    </div>
+  </div>
         <nav class="navbar">
             <div class="max-width">
-                <!-- Loader Background -->
-                <div class="loader_bg">
-                    <!-- Circle Loader -->
-                    <div class="loader">
-                        <svg viewBox="0 0 80 80">
-                            <circle r="32" cy="40" cx="40"></circle>
-                        </svg>
-                    </div>
-
-                    <!-- Triangle Loader -->
-                    <div class="loader triangle">
-                        <svg viewBox="0 0 86 80">
-                            <polygon points="43 8 79 72 7 72"></polygon>
-                        </svg>
-                    </div>
-
-                    <!-- Square Loader -->
-                    <div class="loader">
-                        <svg viewBox="0 0 80 80">
-                            <rect height="64" width="64" y="8" x="8"></rect>
-                        </svg>
-                    </div>
-                </div>
-
                 <script>
                     window.addEventListener("load", function () {
                         setTimeout(function () {
