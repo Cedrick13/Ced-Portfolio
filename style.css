@@ -679,110 +679,109 @@ footer span a:hover {
     /* social icon */
 }
 .example-2 {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
 }
 
 .example-2 .icon-content {
-  position: relative;
+    position: relative;
 }
 
 .example-2 .icon-content a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  color: #fff;
-  background: #222;
-  border-radius: 50%;
-  text-decoration: none;
-  overflow: hidden;
-  transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background: #222;
+    border-radius: 50%;
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
 .example-2 .icon-content a:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .example-2 .icon-content .filled {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  z-index: 0;
-  transform: scale(0);
-  transition: transform 0.3s ease;
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    z-index: 0;
+    transform: scale(0);
+    transition: transform 0.3s ease;
 }
 
 .example-2 .icon-content a:hover .filled {
-  transform: scale(1);
+    transform: scale(1);
 }
 
 .example-2 .icon-content svg {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  z-index: 1;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
 }
 
 .example-2 .tooltip {
-  position: absolute;
-  bottom: -35px;
-  background: #333;
-  color: #fff;
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 12px;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-  pointer-events: none;
+    position: absolute;
+    bottom: -35px;
+    background: #333;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
 }
 
 .example-2 .icon-content a:hover ~ .tooltip {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Social Colors */
 .example-2 a[data-social="github"] .filled,
 .example-2 a[data-social="github"] ~ .tooltip {
-  background-color: #333;
+    background-color: #333;
 }
 
 .example-2 a[data-social="twitter"] .filled,
 .example-2 a[data-social="twitter"] ~ .tooltip {
-  background-color: #1da1f2;
+    background-color: #1da1f2;
 }
 
 .example-2 a[data-social="facebook"] .filled,
 .example-2 a[data-social="facebook"] ~ .tooltip {
-  background-color: #1877f2;
+    background-color: #1877f2;
 }
 
 .example-2 a[data-social="instagram"] .filled,
 .example-2 a[data-social="instagram"] ~ .tooltip {
-  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
 }
 
 .example-2 a[data-social="linkedin"] .filled,
 .example-2 a[data-social="linkedin"] ~ .tooltip {
-  background-color: #0077b5;
+    background-color: #0077b5;
 }
 .example-2 {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
-
 
 @media (max-width: 768px) {
     .media-icons {
