@@ -520,12 +520,11 @@ section .title::after {
 /* Project cards in rows (like Figma layout) */
 .project-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
     max-width: 1200px;
-    margin: 0 auto 30px;
+    margin: 0 auto;
     padding: 0 20px;
-    align-items: start;
 }
 
 .project-card {
@@ -538,6 +537,41 @@ section .title::after {
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+    .project-card img {
+        height: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card img {
+        height: 200px;
+    }
+
+    .project-overlay h3 {
+        font-size: 18px;
+    }
+
+    .project-overlay p {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card img {
+        height: 180px;
+    }
+
+    .project-overlay h3 {
+        font-size: 16px;
+    }
+
+    .project-overlay p {
+        font-size: 12px;
+    }
 }
 
 .project-card img {
