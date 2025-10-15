@@ -43,6 +43,7 @@
                 }
             });
         
+		
 		</script>
 		<style>
             /* Loader wrapper (covers screen) */
@@ -206,6 +207,7 @@
                 }
             }
         
+		
 		</style>
 	</head>
 	<body>
@@ -246,6 +248,7 @@
                         }, 3000); // 3000ms = 3 seconds
                     });
                 
+				
 				</script>
 				<div class="loaders">CED</div>
 				
@@ -385,9 +388,11 @@
 							and
 							<b>network enthusiast</b>
 							dedicated to solving technical problems and maintaining top system performance. My skills include configuring networks, performing system maintenance, and supporting end-users.
+						</p>
 						<p>
 							I am also expanding my expertise in
-							<b>software development</b> by creating tools and applications with
+							<b>software development</b>
+							by creating tools and applications with
 							<b>C#</b>
 							and
 							<b>MySQL</b>
@@ -402,7 +407,7 @@
 			</div>
 		</section>
 		
-		<!-- skills section start -->  
+		<!-- skills section start -->
 		<section class="skills" id="skills">
 			<div class="max-width">
 				<h2 class="title" data-aos="fade-up">Skills</h2>
@@ -502,10 +507,14 @@
 			<div class="max-width">
 				<h2 class="title" data-aos="fade-up">Portfolio</h2>
 				<p class="subtitle" data-aos="fade-up" data-aos-delay="100">Recent Projects</p>
-				<div class="project-grid">
+				<div class="filter-buttons">
+					<button class="filter-btn active" data-filter="figma">Figma</button>
+					<button class="filter-btn" data-filter="code">Code</button>
+				</div>
+				<div class="project-container">
 					
 					<!-- Card 1 -->
-					<div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+					<div class="project-card figma" data-aos="zoom-in" data-aos-delay="100">
 						<img src="images/P1.png" alt="Project 1">
 						<div class="project-overlay">
 							<h3>Atmos</h3>
@@ -518,7 +527,7 @@
 					</div>
 					
 					<!-- Card 2 -->
-					<div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+					<div class="project-card figma" data-aos="zoom-in" data-aos-delay="100">
 						<img src="images/P4.png" alt="Project 2">
 						<div class="project-overlay">
 							<h3>Pre Enrollment</h3>
@@ -531,7 +540,7 @@
 					</div>
 					
 					<!-- Card 3 -->
-					<div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+					<div class="project-card figma" data-aos="zoom-in" data-aos-delay="100">
 						<img src="images/P5.png" alt="Project 3">
 						<div class="project-overlay">
 							<h3>Static Website</h3>
@@ -544,7 +553,7 @@
 					</div>
 					
 					<!-- Card 4 -->
-					<div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+					<div class="project-card figma" data-aos="zoom-in" data-aos-delay="100">
 						<img src="images/P6.png" alt="Project 3">
 						<div class="project-overlay">
 							<h3>Voting System</h3>
@@ -573,6 +582,7 @@
 
             document.getElementById("year-range").textContent = yearText;
         
+		
 		</script>
 		<script src="script.js"></script>
 		<script>
@@ -593,6 +603,7 @@
                 observer.observe(card);
             });
         
+		
 		</script>
 		
 		<!-- AOS JS -->
@@ -604,6 +615,29 @@
                 offset: 120,
             });
         
+		
+		</script>
+		<script>
+const filterBtns = document.querySelectorAll(".filter-btn");
+const projectCards = document.querySelectorAll(".project-card");
+
+filterBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // remove active state
+    filterBtns.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filter = btn.getAttribute("data-filter");
+    projectCards.forEach((card) => {
+      if (filter === "all" || card.classList.contains(filter)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+});
+
 		</script>
 	</body>
 </html>
