@@ -634,20 +634,13 @@
 
         <!-- footer section start -->
         <footer>
-            <p>
-                ©
-                <span id="year-range"></span>
-                | Ced. All rights reserved.
-            </p>
+            <p>© <span id="year"></span> Ced. All rights reserved.</p>
         </footer>
+
         <script>
-            const startYear = 2023; // Change this to the year your site started
-            const currentYear = new Date().getFullYear();
-
-            const yearText = currentYear === startYear ? startYear : `${startYear}–${currentYear}`;
-
-            document.getElementById("year-range").textContent = yearText;
+            document.getElementById("year").textContent = new Date().getFullYear();
         </script>
+
         <script src="script.js"></script>
         <script>
             const cards = document.querySelectorAll(".project-card");
