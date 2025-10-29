@@ -702,6 +702,20 @@ section .title::after {
   background: #282828;
    color: #fff;
 }
+.qualification__calendar {
+  margin-top: 0.8rem; /* Increase for more space */
+}
+
+.qualification__year {
+  display: inline-block;
+  background-color: #00bcd4; /* skyblue background */
+  color: #fff;               /* white text */
+  padding: 0.4rem 1rem;
+  border-radius: 20px;       /* pill shape */
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
 
 .qualification .title {
     text-align: center;
