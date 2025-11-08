@@ -68,6 +68,7 @@ $(document).ready(function () {
     }
 });
 
+// Initialize AOS library with
 once: true;
 AOS.init({
     duration: 1000, // animation duration
