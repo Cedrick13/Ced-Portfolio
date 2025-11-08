@@ -454,10 +454,20 @@
 							</div>
 						</div>
 					</div>
-					<div class="coming-soon" id="coming-soon" style="display: none">
-						<h3>🚧 Coming Soon 🚧</h3>
-						<p>More exciting projects are on the way!</p>
-					</div>
+				<!-- CODE PROJECTS -->
+<!-- Card 1 -->
+<div class="project-card code" data-aos="zoom-in" data-aos-delay="100">
+    <img src="images/Code 1.png" alt="Code Project 2">
+    <div class="project-overlay">
+        <h3>Event Gallery</h3>
+        <p></p>
+        <div class="project-links">
+            <a href="https://event-showcase-ten.vercel.app/#home-section" target="_blank">View</a>
+            <!--<a href="https://yourwebsite.com" target="_blank">Live</a>-->
+        </div>
+    </div>
+</div>
+
 				</div>
 			</div>
 		</section>
@@ -736,39 +746,71 @@
             });
         
 		</script>
-		<script>
-            const filterBtns = document.querySelectorAll(".filter-btn");
-            const projectCards = document.querySelectorAll(".project-card");
-            const comingSoon = document.getElementById("coming-soon");
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+  const comingSoon = document.getElementById('coming-soon');
 
-            filterBtns.forEach((btn) => {
-                btn.addEventListener("click", () => {
-                    // Remove active state
-                    filterBtns.forEach((b) => b.classList.remove("active"));
-                    btn.classList.add("active");
+  // Ensure initial state (show only the active filter cards)
+  const initFilter = () => {
+    const activeBtn = document.querySelector('.filter-btn.active');
+    const filter = activeBtn ? activeBtn.dataset.filter : 'all';
+    applyFilter(filter, false);
+  };
 
-                    const filter = btn.getAttribute("data-filter");
-                    let visibleCount = 0;
+  // Apply filter and re-run AOS refresh
+  function applyFilter(filter, runAOS = true) {
+    let hasVisible = false;
 
-                    projectCards.forEach((card) => {
-                        if (filter === "all" || card.classList.contains(filter)) {
-                            card.style.display = "block";
-                            visibleCount++;
-                        } else {
-                            card.style.display = "none";
-                        }
-                    });
+    projectCards.forEach(card => {
+      const match = (filter === 'all') || card.classList.contains(filter);
+      // Use display to remove from flow (keeps grid nice)
+      card.style.display = match ? '' : 'none';
+      if (match) hasVisible = true;
+    });
 
-                    // Show "Coming Soon" if no cards match
-                    if (visibleCount === 0) {
-                        comingSoon.style.display = "flex";
-                    } else {
-                        comingSoon.style.display = "none";
-                    }
-                });
-            });
-        
-		</script>
+    // coming-soon show/hide
+    if (comingSoon) comingSoon.style.display = hasVisible ? 'none' : 'flex';
+
+    if (!runAOS) return;
+
+    // Give the browser a moment to reflow, then refresh AOS.
+    // A small delay avoids race conditions where AOS checks too early.
+    setTimeout(() => {
+      try {
+        // prefer refreshHard if available, otherwise refresh
+        if (window.AOS && typeof window.AOS.refreshHard === 'function') {
+          window.AOS.refreshHard();
+        } else if (window.AOS && typeof window.AOS.refresh === 'function') {
+          window.AOS.refresh();
+        } else {
+          // If AOS isn't loaded yet, do nothing (or log)
+          console.warn('AOS not found. Make sure AOS.init() runs before this script.');
+        }
+      } catch (e) {
+        console.error('Error refreshing AOS:', e);
+      }
+    }, 60); // 40-120ms is usually fine; adjust if you still see issues
+  }
+
+  // Button handlers
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      filterButtons.forEach(b => b.classList.remove('active'));
+      button.classList.add('active');
+      const filter = button.dataset.filter || 'all';
+      applyFilter(filter, true);
+    });
+  });
+
+  // Initialize once
+  initFilter();
+});
+</script>
+
+
+
 		<script>
 const tabs = document.querySelectorAll('[data-target]'),
       contents = document.querySelectorAll('[data-content]');
