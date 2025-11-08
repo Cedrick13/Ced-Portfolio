@@ -67,12 +67,3 @@ $(document).ready(function () {
         loader.classList.add("disppear");
     }
 });
-
-// Initialize AOS library with
-once: true;
-AOS.init({
-    duration: 1000, // animation duration
-    once: false, // 👈 animate again when scrolling back up
-    offset: 120, // trigger distance
-});
-AOS.refresh();

@@ -768,13 +768,21 @@
             });
         </script>
 
-        <!-- AOS JS -->
+        <!-- AOS library -->
         <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+        <!-- AOS setup (only once) -->
         <script>
-            AOS.init({
-                duration: 1000,
-                once: false, // allows animation on scroll up
-                offset: 120,
+            document.addEventListener("DOMContentLoaded", () => {
+                AOS.init({
+                    duration: 1000,
+                    once: false,
+                    mirror: true, // 👈 replays animation on scroll up
+                    offset: 80,
+                    easing: "ease-in-out",
+                });
+
+                setTimeout(() => AOS.refresh(), 500); // Fixes mobile reflow timing
             });
         </script>
         <script>
