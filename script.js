@@ -119,3 +119,25 @@ window.addEventListener("load", function () {
 window.addEventListener("DOMContentLoaded", function () {
     document.getElementById("year").textContent = new Date().getFullYear();
 });
+
+// Fade-in animation for project cards
+window.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".project-card");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("fade-in");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+
+    cards.forEach((card) => {
+        observer.observe(card);
+    });
+});
+

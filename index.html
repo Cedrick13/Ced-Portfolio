@@ -547,25 +547,7 @@
             </p>
         </footer>
         <script src="script.js"></script>
-        <script>
-            const cards = document.querySelectorAll(".project-card");
-            const observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add("fade-in");
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                },
-                { threshold: 0.2 }
-            );
-
-            cards.forEach((card) => {
-                observer.observe(card);
-            });
-        </script>
-
+        
         <!-- AOS library -->
         <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
