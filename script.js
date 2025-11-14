@@ -215,3 +215,24 @@ document.addEventListener("DOMContentLoaded", function () {
     initFilter();
 });
 
+// AOS initialization
+document.addEventListener("DOMContentLoaded", () => {
+    if (window.AOS) {
+        AOS.init({
+            duration: 1000,
+            once: false,
+            mirror: true,
+            offset: 80,
+            easing: "ease-in-out",
+        });
+
+        // Fix mobile reflow timing
+        setTimeout(() => {
+            if (typeof AOS.refresh === "function") {
+                AOS.refresh();
+            }
+        }, 500);
+    } else {
+        console.warn("AOS library not loaded.");
+    }
+});
