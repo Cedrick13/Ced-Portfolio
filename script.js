@@ -158,3 +158,60 @@ window.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+// Project filtering with AOS refresh
+document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projectCards = document.querySelectorAll(".project-card");
+    const comingSoon = document.getElementById("coming-soon");
+
+    // Ensure initial state (show only the active filter cards)
+    const initFilter = () => {
+        const activeBtn = document.querySelector(".filter-btn.active");
+        const filter = activeBtn ? activeBtn.dataset.filter : "all";
+        applyFilter(filter, false);
+    };
+
+    // Apply filter and re-run AOS refresh
+    function applyFilter(filter, runAOS = true) {
+        let hasVisible = false;
+
+        projectCards.forEach((card) => {
+            const match = filter === "all" || card.classList.contains(filter);
+            card.style.display = match ? "" : "none";
+            if (match) hasVisible = true;
+        });
+
+        if (comingSoon) comingSoon.style.display = hasVisible ? "none" : "flex";
+
+        if (!runAOS) return;
+
+        setTimeout(() => {
+            try {
+                if (window.AOS && typeof window.AOS.refreshHard === "function") {
+                    window.AOS.refreshHard();
+                } else if (window.AOS && typeof window.AOS.refresh === "function") {
+                    window.AOS.refresh();
+                } else {
+                    console.warn("AOS not found. Make sure AOS.init() runs before this script.");
+                }
+            } catch (e) {
+                console.error("Error refreshing AOS:", e);
+            }
+        }, 60);
+    }
+
+    // Button handlers
+    filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            filterButtons.forEach((b) => b.classList.remove("active"));
+            button.classList.add("active");
+            const filter = button.dataset.filter || "all";
+            applyFilter(filter, true);
+        });
+    });
+
+    // Initialize once
+    initFilter();
+});
+
