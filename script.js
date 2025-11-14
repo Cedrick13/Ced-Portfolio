@@ -141,3 +141,20 @@ window.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Qualification tabs functionality
+window.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll("[data-target]");
+    const contents = document.querySelectorAll("[data-content]");
+
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            const target = document.querySelector(tab.dataset.target);
+
+            contents.forEach((c) => c.classList.remove("qualification__active"));
+            target.classList.add("qualification__active");
+
+            tabs.forEach((t) => t.classList.remove("qualification__active"));
+            tab.classList.add("qualification__active");
+        });
+    });
+});
