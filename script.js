@@ -115,3 +115,7 @@ window.addEventListener("load", function () {
     }, 3000); // 3000ms = 3 seconds
 });
 
+// Update year in footer
+window.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("year").textContent = new Date().getFullYear();
+});
