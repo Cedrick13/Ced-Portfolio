@@ -84,15 +84,20 @@ section .title::after {
     font-family: "Ubuntu", sans-serif;
     transition: all 0.3s ease;
 }
+/* Sticky + Blur combined */
 .navbar.sticky {
     padding: 15px 0;
-    background: linear-gradient(180deg, #00bcd4, #282828);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1); /* adjust opacity */
+    transition: 0.3s ease;
 }
 .navbar .max-width {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 @keyframes vanish {
     100% {
         opacity: 0;
