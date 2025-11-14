@@ -78,3 +78,33 @@ window.addEventListener("scroll", () => {
         navbar.classList.remove("sticky");
     }
 });
+
+// Disable right click
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+});
+
+// Disable certain key combinations 
+document.addEventListener("keydown", function (e) {
+    // F12
+    if (e.keyCode === 123) {
+        e.preventDefault();
+        return false;
+    }
+    // Ctrl+Shift+I (Inspect)
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") {
+        e.preventDefault();
+        return false;
+    }
+    // Ctrl+U (View Source)
+    if (e.ctrlKey && e.key.toLowerCase() === "u") {
+        e.preventDefault();
+        return false;
+    }
+    // Ctrl+Shift+J (Console)
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "j") {
+        e.preventDefault();
+        return false;
+    }
+});
+
