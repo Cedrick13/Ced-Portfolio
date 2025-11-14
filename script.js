@@ -84,7 +84,7 @@ document.addEventListener("contextmenu", function (e) {
     e.preventDefault();
 });
 
-// Disable certain key combinations 
+// Disable certain key combinations
 document.addEventListener("keydown", function (e) {
     // F12
     if (e.keyCode === 123) {
