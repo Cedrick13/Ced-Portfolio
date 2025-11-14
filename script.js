@@ -108,3 +108,10 @@ document.addEventListener("keydown", function (e) {
     }
 });
 
+// Loader fade out after 3 seconds
+window.addEventListener("load", function () {
+    setTimeout(function () {
+        document.querySelector(".loader_bg").classList.add("hidden");
+    }, 3000); // 3000ms = 3 seconds
+});
+
