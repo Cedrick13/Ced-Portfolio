@@ -236,3 +236,62 @@ document.addEventListener("DOMContentLoaded", () => {
         console.warn("AOS library not loaded.");
     }
 });
+
+const canvas = document.getElementById("snow");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resizeCanvas();
+
+let snowflakes = [];
+
+class Snowflake {
+    constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 4 + 1;
+        this.speedY = Math.random() * 1.5 + 0.5;
+        this.speedX = Math.random() * 0.6 - 0.3;
+    }
+
+    update() {
+        this.y += this.speedY;
+        this.x += this.speedX;
+
+        if (this.y > canvas.height) {
+            this.y = -10;
+            this.x = Math.random() * canvas.width;
+        }
+    }
+
+    draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(255,255,255,0.8)";
+        ctx.fill();
+    }
+}
+
+function createSnow() {
+    snowflakes = [];
+    for (let i = 0; i < 180; i++) {
+        snowflakes.push(new Snowflake());
+    }
+}
+
+function animateSnow() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    snowflakes.forEach(flake => {
+        flake.update();
+        flake.draw();
+    });
+    requestAnimationFrame(animateSnow);
+}
+
+createSnow();
+animateSnow();
+
+window.addEventListener("resize", resizeCanvas);
