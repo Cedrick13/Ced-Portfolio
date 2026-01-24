@@ -237,6 +237,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// Snow effect on canvas
 document.addEventListener("DOMContentLoaded", function () {
     const canvas = document.getElementById("snow");
     if (!canvas) return; // safety check
