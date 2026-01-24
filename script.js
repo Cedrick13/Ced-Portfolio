@@ -283,7 +283,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    function createSnow(count = 180) {
+    function createSnow(count = 100) {
         snowflakes = [];
         for (let i = 0; i < count; i++) {
             snowflakes.push(new Snowflake());
