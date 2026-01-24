@@ -237,61 +237,72 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-const canvas = document.getElementById("snow");
-const ctx = canvas.getContext("2d");
+document.addEventListener("DOMContentLoaded", function () {
+    const canvas = document.getElementById("snow");
+    if (!canvas) return; // safety check
 
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-}
-resizeCanvas();
+    const ctx = canvas.getContext("2d");
 
-let snowflakes = [];
-
-class Snowflake {
-    constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 4 + 1;
-        this.speedY = Math.random() * 1.5 + 0.5;
-        this.speedX = Math.random() * 0.6 - 0.3;
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
     }
+    resizeCanvas();
 
-    update() {
-        this.y += this.speedY;
-        this.x += this.speedX;
+    let snowflakes = [];
 
-        if (this.y > canvas.height) {
-            this.y = -10;
+    class Snowflake {
+        constructor() {
+            this.reset();
+        }
+
+        reset() {
             this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.size = Math.random() * 4 + 1;
+            this.speedY = Math.random() * 1.5 + 0.5;
+            this.speedX = Math.random() * 0.6 - 0.3;
+        }
+
+        update() {
+            this.y += this.speedY;
+            this.x += this.speedX;
+
+            if (this.y > canvas.height) {
+                this.y = -10;
+                this.x = Math.random() * canvas.width;
+            }
+        }
+
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fillStyle = "rgba(255,255,255,0.8)";
+            ctx.fill();
         }
     }
 
-    draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(255,255,255,0.8)";
-        ctx.fill();
+    function createSnow(count = 180) {
+        snowflakes = [];
+        for (let i = 0; i < count; i++) {
+            snowflakes.push(new Snowflake());
+        }
     }
-}
 
-function createSnow() {
-    snowflakes = [];
-    for (let i = 0; i < 180; i++) {
-        snowflakes.push(new Snowflake());
+    function animateSnow() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        snowflakes.forEach(flake => {
+            flake.update();
+            flake.draw();
+        });
+        requestAnimationFrame(animateSnow);
     }
-}
 
-function animateSnow() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    snowflakes.forEach(flake => {
-        flake.update();
-        flake.draw();
-    });
-    requestAnimationFrame(animateSnow);
-}
+    // ⏳ Start snow AFTER loader disappears
+    setTimeout(() => {
+        createSnow();
+        animateSnow();
+    }, 3100); // match loader fade time
 
-createSnow();
-animateSnow();
-
-window.addEventListener("resize", resizeCanvas);
+    window.addEventListener("resize", resizeCanvas);
+});

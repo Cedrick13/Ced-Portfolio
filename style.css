@@ -132,8 +132,8 @@ section .title::after {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* clicks still work */
-    z-index: 9999; /* snow stays on top */
+    pointer-events: none;
+    z-index: 1; /* BELOW navbar, ABOVE background */
 }
 
 /* === Scroll Up Button === */
