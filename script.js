@@ -240,7 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Snow effect on canvas
 document.addEventListener("DOMContentLoaded", function () {
     const canvas = document.getElementById("snow");
-    if (!canvas) return; // safety check
+    if (!canvas) return;
 
     const ctx = canvas.getContext("2d");
 
@@ -249,6 +249,17 @@ document.addEventListener("DOMContentLoaded", function () {
         canvas.height = window.innerHeight;
     }
     resizeCanvas();
+
+    function isChristmasSeasonPH() {
+        const now = new Date();
+        const month = now.getMonth();
+        const day = now.getDate();
+
+        return (
+            (month === 10 && day >= 1) ||
+            month === 11
+        );
+    }
 
     let snowflakes = [];
 
@@ -299,11 +310,16 @@ document.addEventListener("DOMContentLoaded", function () {
         requestAnimationFrame(animateSnow);
     }
 
-    // ⏳ Start snow AFTER loader disappears
     setTimeout(() => {
-        createSnow();
-        animateSnow();
-    }, 3100); // match loader fade time
+        if (isChristmasSeasonPH()) {
+            canvas.style.display = "block";
+            createSnow();
+            animateSnow();
+        } else {
+            canvas.style.display = "none";
+        }
+    }, 3100);
 
     window.addEventListener("resize", resizeCanvas);
 });
+
