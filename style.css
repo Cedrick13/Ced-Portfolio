@@ -359,6 +359,46 @@ section .title::after {
     }
 }
 
+/* Hamburger hidden on desktop */
+.menu-btn {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+    .menu-btn {
+        display: block;
+        z-index: 1001;
+    }
+
+    .example-2 {
+        position: fixed;
+        top: 60px;
+        right: -100%; /* hide off screen */
+        width: 220px;
+        height: auto;
+        background: #222;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px 0 0 10px;
+        transition: 0.3s ease;
+        z-index: 1000;
+    }
+
+    .example-2.active {
+        right: 0; /* slide in */
+    }
+
+    .example-2 li {
+        margin: 15px 0;
+    }
+}
+
 /* --- HOME SECTION --- */
 .home {
     display: flex;

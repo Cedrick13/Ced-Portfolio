@@ -323,3 +323,11 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("resize", resizeCanvas);
 });
 
+// Hamburger menu toggle
+const menuBtn = document.getElementById("menu-btn");
+const menu = document.getElementById("menu");
+
+menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+});
+
