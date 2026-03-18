@@ -329,5 +329,9 @@ const menu = document.getElementById("menu");
 
 menuBtn.addEventListener("click", () => {
     menu.classList.toggle("active");
+
+    menuBtn.innerHTML = menu.classList.contains("active")
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
 });
 
