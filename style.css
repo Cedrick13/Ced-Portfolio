@@ -1160,14 +1160,14 @@ body.dark .navbar.sticky {
     border: 2px solid #00bcd4;
     border-radius: 6px;
     text-decoration: none;
-    color: #00bcd4;
+    color: var(--text);
     font-weight: 500;
     transition: all 0.3s ease;
 }
 
 .contact__button:hover {
     background-color: #00bcd4;
-    color: #fff;
+    color: var(--text);
 }
 
 /* --- Responsive Rows --- */
