@@ -423,7 +423,7 @@ body.dark .navbar.sticky {
 
 #theme-toggle {
     position: fixed;
-    top: 20px;
+    top: 13px;
     right: 20px;
     background: var(--card);
     color: var(--text);
