@@ -481,7 +481,7 @@ body.dark .navbar.sticky {
 .tagline {
     margin-top: 10px;
     font-size: 1.2rem;
-    color: #fff;
+    color: var(--text);
 }
 
 .cta-button {
