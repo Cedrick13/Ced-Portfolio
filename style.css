@@ -436,6 +436,14 @@ body.dark .navbar.sticky {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+/* Mobile fix */
+@media (max-width: 768px) {
+    #theme-toggle {
+        position: static !important; /* FORCE override */
+        margin-top: 10px;
+    }
+}
+
 /* --- HOME SECTION --- */
 .home {
     display: flex;
