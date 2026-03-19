@@ -594,7 +594,7 @@ body.dark .navbar.sticky {
 .download-btn {
     display: inline-block;
     background: #00bcd4;
-    color: #fff;
+    color: var(--text);
     padding: 10px 20px;
     border-radius: 25px;
     text-decoration: none;
