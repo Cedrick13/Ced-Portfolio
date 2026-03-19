@@ -1077,7 +1077,7 @@ body.dark .navbar.sticky {
 
 .qualification__content p {
     font-size: 0.9rem;
-    color: gray;
+    color: var(--secondary);
 }
 
 /* Left column aligns text right */
