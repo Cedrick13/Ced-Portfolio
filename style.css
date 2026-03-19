@@ -1191,13 +1191,12 @@ footer {
     padding: 15px 23px;
     color: var(--text);
     text-align: center;
+
+    border-top: 1px solid rgba(0,0,0,0.1); /* light mode */
 }
-footer span a {
-    color: var(--secondary);
-    text-decoration: none;
-}
-footer span a:hover {
-    text-decoration: underline;
+
+body.dark footer {
+    border-top: 1px solid rgba(255,255,255,0.1); /* dark mode */
 }
 
 /* responsive media query start */
