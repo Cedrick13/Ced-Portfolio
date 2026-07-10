@@ -357,3 +357,32 @@ toggle.addEventListener("click", () => {
     }
 });
 
+// Certificate modal functionality
+const modal = document.getElementById("certificateModal");
+
+const modalImage = document.getElementById("certificateImage");
+
+function openCertificate(image){
+
+    modal.style.display="flex";
+
+    modalImage.src=image;
+
+}
+
+document.querySelector(".close-modal").onclick=function(){
+
+    modal.style.display="none";
+
+}
+
+window.onclick=function(e){
+
+    if(e.target==modal){
+
+        modal.style.display="none";
+
+    }
+
+}
+
