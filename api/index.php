@@ -21,6 +21,7 @@ require_once __DIR__ . '/components/home.php';
 require_once __DIR__ . '/components/projects.php';
 require_once __DIR__ . '/components/about.php';
 require_once __DIR__ . '/components/skills.php';
+require_once __DIR__ . '/components/certificates.php';
 require_once __DIR__ . '/components/qualifications.php';
 require_once __DIR__ . '/components/contact.php';
 
