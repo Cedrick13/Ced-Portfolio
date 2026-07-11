@@ -24,7 +24,7 @@
                 </div>
             </div>
 
-            <div class="project-card figma" data-aos="zoom-in" data-aos-delay="100">
+            <!--<div class="project-card figma" data-aos="zoom-in" data-aos-delay="100">
                 <img src="images/P4.png" alt="Project 2" />
                 <div class="project-overlay">
                     <h3>Pre Enrollment</h3>
@@ -37,7 +37,7 @@
                         >
                     </div>
                 </div>
-            </div>
+            </div>-->
 
             <div class="project-card figma" data-aos="zoom-in" data-aos-delay="100">
                 <img src="images/P5.png" alt="Project 3" />
@@ -54,7 +54,7 @@
                 </div>
             </div>
 
-            <div class="project-card figma" data-aos="zoom-in" data-aos-delay="100">
+            <!--<div class="project-card figma" data-aos="zoom-in" data-aos-delay="100">
                 <img src="images/P6.png" alt="Project 3" />
                 <div class="project-overlay">
                     <h3>Voting System</h3>
@@ -67,7 +67,7 @@
                         >
                     </div>
                 </div>
-            </div>
+            </div>-->
 
             <div class="project-card figma" data-aos="zoom-in" data-aos-delay="100">
                 <img src="images/P2.png" alt="Project 3" />
